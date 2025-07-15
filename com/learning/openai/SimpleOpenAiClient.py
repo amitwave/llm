@@ -23,10 +23,10 @@ class SimpleOpenAiClient:
 
     def invokellm(self, message):
         messages = [
-            # (
-            #     "system",
-            #     "You are a helpful assistant that translates English to French. Translate the user sentence.",
-            # ),
+            (
+                "system",
+                "You are a helpful assistant that writes good essays",
+            ),
             ("human", message),
         ]
         return self.llm.invoke(messages)
